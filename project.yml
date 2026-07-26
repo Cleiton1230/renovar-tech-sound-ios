@@ -10,6 +10,7 @@ targets:
     sources:
       - Sources/RenovarTechSoundApp
     info:
+      path: Sources/RenovarTechSoundApp/Info.plist
       properties:
         UILaunchScreen: {}
         NSMicrophoneUsageDescription: "Precisamos do microfone para o Karaoke ao vivo."
