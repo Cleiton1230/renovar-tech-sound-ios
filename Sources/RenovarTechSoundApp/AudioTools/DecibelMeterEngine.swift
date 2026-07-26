@@ -46,9 +46,9 @@ final class DecibelMeterEngine: ObservableObject {
         recorder.updateMeters()
         // averagePower(forChannel:) vai de -160 (silencio) a 0 (maximo).
         // Convertendo para uma estimativa aproximada de dB SPL.
-        let power = recorder.averagePower(forChannel: 0)
-        let estimatedSPL = max(0, power + 100)
-        currentDecibels = estimatedSPL
+        let power: Float = recorder.averagePower(forChannel: 0)
+        let estimatedSPL: Float = max(0, power + 100)
+        currentDecibels = Double(estimatedSPL)
     }
 
     func stop() {
