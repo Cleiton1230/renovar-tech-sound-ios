@@ -1,0 +1,24 @@
+name: RenovarTechSoundApp
+options:
+  bundleIdPrefix: com.renovartech
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  RenovarTechSoundApp:
+    type: application
+    platform: iOS
+    sources:
+      - Sources/RenovarTechSoundApp
+    info:
+      properties:
+        UILaunchScreen: {}
+        NSMicrophoneUsageDescription: "Precisamos do microfone para o Karaoke ao vivo."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.renovartech.soundapp
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
