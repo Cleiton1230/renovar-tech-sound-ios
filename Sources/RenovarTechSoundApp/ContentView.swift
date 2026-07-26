@@ -3,48 +3,56 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            AudioToolsView()
+                .tabItem {
+                    Label("Audio", systemImage: "waveform")
+                }
+
+            RelaxingSoundsView()
+                .tabItem {
+                    Label("Relaxar", systemImage: "leaf.fill")
+                }
+
             KaraokeView()
                 .tabItem {
                     Label("Karaoke", systemImage: "mic.fill")
                 }
 
-            PlaceholderView(title: "Ferramentas de Audio")
+            SyncView()
                 .tabItem {
-                    Label("Audio", systemImage: "waveform")
+                    Label("Sincronizar", systemImage: "arrow.triangle.2.circlepath")
                 }
 
-            PlaceholderView(title: "Sons Relaxantes")
+            HearingTestView()
                 .tabItem {
-                    Label("Relaxar", systemImage: "leaf.fill")
+                    Label("Teste Auditivo", systemImage: "ear")
                 }
 
-            PlaceholderView(title: "Assinatura")
+            StoreAssistanceView()
+                .tabItem {
+                    Label("Loja", systemImage: "cart.fill")
+                }
+
+            SubscriptionView()
                 .tabItem {
                     Label("Assinatura", systemImage: "star.fill")
                 }
 
-            PlaceholderView(title: "Mais")
+            LegalView()
                 .tabItem {
-                    Label("Mais", systemImage: "ellipsis")
+                    Label("Legal", systemImage: "doc.text")
+                }
+
+            MyDevicesView()
+                .tabItem {
+                    Label("Dispositivos", systemImage: "headphones")
+                }
+
+            CalculatorView()
+                .tabItem {
+                    Label("Calculadora", systemImage: "function")
                 }
         }
         .tint(.renovarTeal)
-    }
-}
-
-struct PlaceholderView: View {
-    let title: String
-
-    var body: some View {
-        VStack(spacing: 16) {
-            Text(title)
-                .font(.title2)
-                .bold()
-                .foregroundColor(.renovarTeal)
-            Text("Em construcao nesta versao do app para iPhone.")
-                .foregroundColor(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.renovarBackground.ignoresSafeArea())
     }
 }
