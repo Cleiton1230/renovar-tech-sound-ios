@@ -6,7 +6,7 @@ import Foundation
 /// no banco) - nao e um segredo como uma senha ou service_role key.
 enum SupabaseConfig {
     static let projectURL = URL(string: "https://zznuhmskgruandrjjncq.supabase.co")!
-    static let anonKey = "COLE_AQUI_SUA_ANON_KEY_DO_SUPABASE"
+    static let anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6bnVobXNrZ3J1YW5kcmpqbmNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUwNDMxMzEsImV4cCI6MjEwMDYxOTEzMX0.q81IWyUseoUFccpQCC5FMnDPSvMwYqGxkCwcYGnWT6o"
 
     static func functionURL(_ name: String) -> URL {
         projectURL.appendingPathComponent("functions/v1/\(name)")
